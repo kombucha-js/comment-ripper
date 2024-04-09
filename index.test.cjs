@@ -1,10 +1,10 @@
+'use strict';
 
-
-import util       from 'node:util';
-import assert     from 'node:assert/strict';
-import { test, describe, it, before, after } from 'node:test' ;
-import fs from 'fs';
-import { rip_comments, rip_directives } from './index.mjs';
+const  util   = require( 'node:util' );
+const  assert = require( 'node:assert/strict' );
+const  { test, describe, it, before, after }  = require( 'node:test' );
+const fs = require( 'fs' );
+const { rip_comments, rip_directives } = require( './index.cjs' );
 
 
 

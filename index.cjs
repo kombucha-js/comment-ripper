@@ -1,3 +1,13 @@
+'use strict';
+
+function inspect(s) {
+  return JSON.stringify( s, (k,v)=>typeof v === 'function' ? v.toString() : v, 2 );
+}
+
+
+
+
+
 
 function remove_leading_string_from_comment_block( comment_block ) {
   return comment_block.replace( /^\s*\*/mg ,'' );
@@ -23,3 +33,8 @@ function rip_directives( comment ) {
   return result;
 }
 
+
+
+
+module.exports.rip_comments      = rip_comments;
+module.exports.rip_directives    = rip_directives;
