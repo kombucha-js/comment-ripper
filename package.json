@@ -3,8 +3,22 @@
   "version": "1.0.0",
   "description": "a module to extract comment blocks from source code",
   "main": "index.mjs",
+  "type": "module",
+  "exports": {
+    "./common.js": {
+      "default": "./index.cjs"
+    },
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.cjs"
+    }
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test-esm": "node --test-reporter='spec' --test-name-pattern='.*' index.test.mjs",
+    "test-cjs": "node --test-reporter='spec' --test-name-pattern='.*' index.test.cjs",
+    "test-simple": "npm run make; npm run test-cs",
+    "test": "npm run make; npm run test-esm; npm run test-cjs",
+    "make": "node ./make.js"
   },
   "repository": {
     "type": "git",
