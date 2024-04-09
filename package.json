@@ -1,0 +1,19 @@
+{
+  "name": "comment-ripper",
+  "version": "1.0.0",
+  "description": "a module to extract comment blocks from source code",
+  "main": "index.mjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/kombucha-js/comment-ripper.git"
+  },
+  "author": "Atsushi Oka",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kombucha-js/comment-ripper/issues"
+  },
+  "homepage": "https://github.com/kombucha-js/comment-ripper#readme"
+}
